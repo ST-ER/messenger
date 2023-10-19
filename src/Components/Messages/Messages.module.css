@@ -1,0 +1,11 @@
+.messages{
+    display: grid;
+    grid-template-columns: 815px 815px;
+    grid-template-rows: 1080px;
+    background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
+}
+.item{
+    border:  1px solid #000;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}

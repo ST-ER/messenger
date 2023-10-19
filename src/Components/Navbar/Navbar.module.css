@@ -1,4 +1,6 @@
 .navbar{
+    grid-area: navbar;
+
     text-align: center;
 
     font-family: Roboto, sans-serif;
@@ -12,6 +14,22 @@
                 35.08772px 0px 70px 0px rgba(86, 128, 248, 0.05),
                 14.03509px 0px 25px 0px rgba(86, 128, 248, 0.03);
 }
+
+
+
+.item a{
+    color: #707C97;
+    text-decoration: none; 
+}
+.item a.active{
+    color: #2A8BF2;
+    text-decoration: none; 
+}
+
+
+
+
+
  img{
     height: 86px;
     width: 86px;
@@ -27,33 +45,33 @@
 }
 .home{
     margin-top: 90px;
-    color: #707C97;
+    /* color: #707C97; */
 }
 .chat{
     margin-top: 56px;
-    color: #707C97;
+    /* color: #707C97; */
 }
 .contact{
     margin-top: 56px;
-    color: #707C97;
+    /* color: #707C97; */
 
 }
 .notifications{
     margin-top: 56px;
-    color: #707C97;
+    /* color: #707C97; */
 
 }
 .calendar{
     margin-top: 56px;
-    color: #707C97;
+    /* color: #707C97; */
 
 }
 .settings{
     margin-top: 56px;
-    color: #707C97;
+    /* color: #707C97; */
 
 }
 .logout{
     margin-top: 316px;
-    color: #707C97;
+    /* color: #707C97; */
 }

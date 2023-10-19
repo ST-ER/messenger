@@ -3,22 +3,25 @@
     padding: 0px;
 }
 
-.app{
+/* .app{
     height: 1080px;
     display: grid;
     grid-template-columns: 290px 815px 815px;
     grid-template-areas: "navbar chats chat";
 
+} */
+
+.app{
+    height: 1080px;
+    display: grid;
+    grid-template-columns: 290px 1630px;
+    grid-template-rows: 1080px;
+    grid-template-areas: "navbar content";
+
 }
 .item{
     border:  1px solid #000;
 }
-.navbar{
-    grid-area: navbar;
-}
-.chats{
-    grid-area: chats;
-}
-.chat{
-    grid-area: chat;
+.app-content{
+    grid-area: content;
 }
