@@ -1,0 +1,59 @@
+.navbar{
+    text-align: center;
+
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    background: #FFF;
+    box-shadow: 23.85965px 5.61404px 50px 0px rgba(0, 0, 0, 0.02),
+                35.08772px 0px 70px 0px rgba(86, 128, 248, 0.05),
+                14.03509px 0px 25px 0px rgba(86, 128, 248, 0.03);
+}
+ img{
+    height: 86px;
+    width: 86px;
+    border-radius: 50%;
+
+    margin-top: 92px;
+}
+.name{
+    margin-top: 11px;
+    color: #0D1C2E;
+    font-size: 18px;
+    font-weight: 500;
+}
+.home{
+    margin-top: 90px;
+    color: #707C97;
+}
+.chat{
+    margin-top: 56px;
+    color: #707C97;
+}
+.contact{
+    margin-top: 56px;
+    color: #707C97;
+
+}
+.notifications{
+    margin-top: 56px;
+    color: #707C97;
+
+}
+.calendar{
+    margin-top: 56px;
+    color: #707C97;
+
+}
+.settings{
+    margin-top: 56px;
+    color: #707C97;
+
+}
+.logout{
+    margin-top: 316px;
+    color: #707C97;
+}
