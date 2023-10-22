@@ -1,11 +1,99 @@
+/* Разделение на Chats и Chat */
 .messages{
     display: grid;
     grid-template-columns: 815px 815px;
     grid-template-rows: 1080px;
     background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
 }
+/* Блок Chats */
+.chatsblock{
+    width: 597px;
+    margin-top: 118px;
+    margin-left: 59px;
+
+    /* border:  1px solid #000; */
+
+}
+/* Заголовок Block */
+.title{
+    display: flex;
+}
+.title h3{
+    width: 100px;
+
+    color: #0D1C2E;
+    font-family: Roboto, sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 72.222% */
+    letter-spacing: 0.36px;
+    text-transform: capitalize;
+}
+.title button{
+    border: none;
+    margin-left: 246px;
+    width: 240px;
+    height: 60px;
+
+    border-radius: 6px;
+    background: linear-gradient(93deg, #7CB8F7 0%, #2A8BF2 100%);
+    box-shadow: 10px 6px 25px 0px rgba(42, 139, 242, 0.15), 
+                4px 4px 25px 0px rgba(42, 139, 242, 0.05), 
+                6px 6px 25px 0px rgba(42, 139, 242, 0.15);
+}
+.title button div{
+    height: 24px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.input{
+    margin-top: 30px;
+}
+.input input{
+    border: none;
+    width: 580px;
+    height: 70px;
+    border-radius: 6px;
+    background: #FFF;
+}
+
+
+
+
+
+
+
 .item{
-    border:  1px solid #000;
+    width: 580px;
+    height: 220px;
+    border-radius: 6px;
+    background: #FFF;
+    margin-top: 20px;
+
     padding-bottom: 5px;
     padding-top: 5px;
+    /*  */
+    
+}
+.item a{
+    text-decoration: none; 
+    color: #0D1C2E;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.chats{
+    margin-top: 10px;
 }

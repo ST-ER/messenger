@@ -19,9 +19,6 @@
     grid-template-areas: "navbar content";
 
 }
-.item{
-    border:  1px solid #000;
-}
 .app-content{
     grid-area: content;
 }

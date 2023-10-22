@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-			<div className={`${styles.navbar} item`}>
+			<div className={styles.navbar}>
 				<img src='/avatar.jpg' alt='avatar' />
 				<div className={styles.name}>Egor Starovoytov</div>
 				<nav>
