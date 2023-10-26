@@ -27,7 +27,7 @@ const Messages = () => {
     return (
 			<div className={s.messages}>
 				<div className={s.chatsblock}>
-					<Title />
+					<Title useChats={useChats} chats={chats} />
 					<Search setSearch={setSearch} />
 					<div className={s.chats}>{chatsElement}</div>
 				</div>
