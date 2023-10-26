@@ -12,22 +12,24 @@ const Messages = () => {
 		{ id: 2, name: 'Boris' },
 		{ id: 3, name: 'Viktor' },
 	])
-	// let chats = [
-	// 	{ id: 1, name: 'Alex' },
-	// 	{ id: 2, name: 'Boris' },
-	// 	{ id: 3, name: 'Viktor' },
-	// ]
-	let chatsElement = chats.map(({id,name}) => (
-		<Chats id={id} name={name}/>
+
+	const [search, setSearch] = useState('')
+ 
+	const filterChats = chats.filter(chat => {
+		return chat.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+	})
+
+	// let chatsElement = chats.map(({id,name}) => (
+	let chatsElement = filterChats.map(({ id, name }) => (
+		<Chats id={id} name={name} key={id}/>
 	))
+
     return (
 			<div className={s.messages}>
 				<div className={s.chatsblock}>
 					<Title />
-					<Search />
-					<div className={s.chats}>
-						{chatsElement}
-					</div>
+					<Search setSearch={setSearch} />
+					<div className={s.chats}>{chatsElement}</div>
 				</div>
 
 				<div className={s.chatblock}>
