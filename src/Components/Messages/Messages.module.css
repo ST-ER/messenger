@@ -2,19 +2,13 @@
 .messages{
     display: grid;
     grid-template-columns: 815px 815px;
+    grid-template-columns: 650px 974px;
+
     grid-template-rows: 1080px;
     background: linear-gradient(180deg, #F3F3FB 0%, #FDFBFD 100%);
 }
-/* Блок Chats */
-.chatsblock{
-    width: 597px;
-    margin-top: 118px;
-    margin-left: 59px;
 
-    /* border:  1px solid #000; */
-
-}
-/* Заголовок Block */
+/* --------------------------------Заголовок Block */
 .title{
     display: flex;
 }
@@ -54,6 +48,8 @@
     line-height: normal;
     text-transform: capitalize;
 }
+
+/* --------------------------------Input */
 .input{
     margin-top: 30px;
 }
@@ -65,12 +61,12 @@
     background: #FFF;
 }
 
-
-
-
-
-
-
+/* ---------------------------------Блок Chats */
+.chatsblock{
+    width: 597px;
+    margin-top: 118px;
+    margin-left: 59px;
+}
 .item{
     width: 580px;
     height: 220px;
@@ -96,4 +92,26 @@
 }
 .chats{
     margin-top: 10px;
+}
+
+/* ---------------------------------Блок Chat */
+.chatblock{
+    margin-top: 118px;
+    margin-bottom: 40px;
+    margin-right: 53px;
+    margin-left: 87px;
+    width: 850px;
+    height: 930px;
+    background: #FFF;
+}
+.MessageTitle{
+    width: 850px;
+    height: 110px;
+    border-radius: 6px 6px 0px 0px;
+    background: #FAFBFF;
+}
+.chat{
+    width: 850px;
+    height: 930px;
+    margin-bottom: 40px;
 }
