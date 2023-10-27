@@ -10,25 +10,70 @@ const Navbar = () => {
 				<div className={styles.name}>Egor Starovoytov</div>
 				<nav>
 					<div className={`${styles.home} ${styles.item}`}>
-						<NavLink to='/profile'>home</NavLink>
+						<NavLink
+							to='/profile'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							home
+						</NavLink>
 					</div>
+
 					<div className={`${styles.chat} ${styles.item}`}>
-						<NavLink to='/chats'>chat</NavLink>
+						<NavLink
+							to='/chats'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							chat
+						</NavLink>
 					</div>
 					<div className={`${styles.contact} ${styles.item}`}>
-						<NavLink to='/'>contact</NavLink>
+						<NavLink
+							to='/'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							contact
+						</NavLink>
 					</div>
 					<div className={`${styles.notifications} ${styles.item}`}>
-						<NavLink to='/'>notifications</NavLink>
+						<NavLink
+							to='/'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							notifications
+						</NavLink>
 					</div>
 					<div className={`${styles.calendar} ${styles.item}`}>
-						<NavLink to='/'>calendar</NavLink>
+						<NavLink
+							to='/'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							calendar
+						</NavLink>
 					</div>
 					<div className={`${styles.settings} ${styles.item}`}>
-						<NavLink to='/'>settings</NavLink>
+						<NavLink
+							to='/'
+							className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}
+						>
+							settings
+						</NavLink>
 					</div>
 					<div className={`${styles.logout} ${styles.item}`}>
-						<NavLink to='/'>log out</NavLink>
+						<NavLink to='/' className={({ isActive }) =>
+								isActive ? styles.active : undefined
+							}>log out</NavLink>
 					</div>
 					{/* <div className={styles.contact}>contact</div>
 					<div className={styles.notifications}>notifications</div>

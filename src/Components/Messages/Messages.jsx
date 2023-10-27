@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react'
 import Chat from './Components/Chat';
 import Chats from './Components/Chats';
 import Title from './Components/Title';
 import Search from './Components/Search';
 import MessageTitle from './Components/MessageTitle';
 import s from './Messages.module.css'
+import Addmessage from './Components/Addmessage';
 
 const Messages = () => {
 
-	const [chats, useChats] = useState([
+	const [chats, setChats] = useState([
 		{ id: 1, name: 'Alex' },
 		{ id: 2, name: 'Boris' },
 		{ id: 3, name: 'Viktor' },
 	])
-	const [chat, useChat] = useState([
+	const [chat, setChat] = useState([
 		{ id: 1, fromWhom: 'him', message: 'привет' },
 		{ id: 2, fromWhom: 'me', message: 'привет!' },
 	])
@@ -32,18 +33,24 @@ const Messages = () => {
 		<Chat message={message} key={id} />
 	))
 	
-	const [addMessage, setAddMessage] = useState('')
 	
-	const addText = () =>{
-		console.log(addMessage);
-		// useChat([...chat, { id: Date.now(), fromWhom: 'me', message: addMessage }])
-		// setAddMessage('')
-	}
+
+	// function addText (text) {
+	// 	useChat([...chat, { id: Date.now(), fromWhom: 'me', message: text, }])
+	// }
+	const addText = (text) => {
+		const newMessange = {
+			id: Date.now(),
+			fromWhom: 'me',
+			message: text 
+		};
+		setChat([...chat, newMessange])
+	};
 
     return (
 			<div className={s.messages}>
 				<div className={s.chatsblock}>
-					<Title useChats={useChats} chats={chats} />
+					<Title useChats={setChats} chats={chats} />
 					<Search setSearch={setSearch} />
 					<div className={s.chats}>{chatsElement}</div>
 				</div>
@@ -52,14 +59,7 @@ const Messages = () => {
 					<MessageTitle />
 					{/* <Chat chat={chat} useChat={useChat} /> */}
 					<div className={s.chat}>{chatElement}</div>
-					<div>
-						<input
-							type='text'
-							placeholder='Введите сообщение...'
-							onChange={(e) => {setAddMessage(e.target.value)}}
-						/>
-						<button onClick={addText}>Отправить</button>
-					</div>
+					<Addmessage addText={addText} />
 				</div>
 			</div>
 		) 

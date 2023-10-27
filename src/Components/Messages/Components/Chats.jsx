@@ -6,7 +6,12 @@ import s from '../Messages.module.css'
 const Chats = ({id, name}) => {
     return (
 			<div className={s.item}>
-				<NavLink to= {'/chats/'+id}>{name}</NavLink>
+				<NavLink
+					to={'#'}
+					className={({ isActive }) => (isActive ? 'active' : 'inactive')}
+				>
+					{name}
+				</NavLink>
 			</div>
 		)
 };
