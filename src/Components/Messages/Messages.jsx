@@ -7,6 +7,7 @@ import MessageTitle from './Components/MessageTitle';
 import s from './Messages.module.css'
 
 const Messages = () => {
+
 	const [chats, useChats] = useState([
 		{ id: 1, name: 'Alex' },
 		{ id: 2, name: 'Boris' },
@@ -18,7 +19,6 @@ const Messages = () => {
 	])
 
 	const [search, setSearch] = useState('')
- 
 	const filterChats = chats.filter(chat => {
 		return chat.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
 	})
@@ -31,6 +31,14 @@ const Messages = () => {
 	let chatElement = chat.map(({ id, message }) => (
 		<Chat message={message} key={id} />
 	))
+	
+	const [addMessage, setAddMessage] = useState('')
+	
+	const addText = () =>{
+		console.log(addMessage);
+		// useChat([...chat, { id: Date.now(), fromWhom: 'me', message: addMessage }])
+		// setAddMessage('')
+	}
 
     return (
 			<div className={s.messages}>
@@ -44,6 +52,14 @@ const Messages = () => {
 					<MessageTitle />
 					{/* <Chat chat={chat} useChat={useChat} /> */}
 					<div className={s.chat}>{chatElement}</div>
+					<div>
+						<input
+							type='text'
+							placeholder='Введите сообщение...'
+							onChange={(e) => {setAddMessage(e.target.value)}}
+						/>
+						<button onClick={addText}>Отправить</button>
+					</div>
 				</div>
 			</div>
 		) 
